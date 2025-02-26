@@ -1,0 +1,10 @@
+flask
+torch
+torchvision
+transformers
+pillow
+werkzeug
+numpy==1.26.4
+kornia
+einops
+timm

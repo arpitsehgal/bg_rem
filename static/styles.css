@@ -1,0 +1,192 @@
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: #F2F2F2;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container Card */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    max-width: 550px;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+h1 {
+    color: #333;
+    font-weight: 500;
+}
+
+/* File input style */
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+input[type="file"]:hover {
+    background-color: #e9ecef;
+}
+
+/* Button Styling */
+button {
+    background-color: #002D46;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: 0.3s;
+    width: 40%;
+  
+}
+
+button:hover {
+    background-color: #002D46;
+    
+}
+
+/* Zoom Slider */
+#scale-slider {
+    width: 90%;
+    -webkit-appearance: none;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.2s;
+}
+
+#scale-slider:hover {
+    background: #bdbdbd;
+}
+
+/* Zoom slider labels */
+.zoom-controls {
+    position: relative;
+    margin: 5px 0;
+}
+
+.zoom-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Preview Container */
+#preview-container {
+    width: 500px;
+    height: 500px;
+    border: 2px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #fafafa;
+    position: relative;
+}
+
+/* Processing circle animation */
+.processing-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    border-top: 6px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Star animations */
+.star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #e6ea00;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle 1.5s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+    100% { opacity: 0; transform: scale(1); }
+}
+
+/* Download Button */
+#download-button {
+    display: none;
+    background-color: #27A7DF;
+    color: white;
+    transition: 0.3s;
+    width: 100%;
+}
+
+#download-button:hover {
+    background-color: #27A7DF;
+}
+
+/* Add this to styles.css */
+.upload-button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    
+}
+
+#upload-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #7F7F7F;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 40%;
+}
+
+#upload-button:hover {
+    background-color: #7F7F7F;
+}
+
+#upload-button svg {
+    transition: 0.3s;
+}
+
+#upload-button:hover svg {
+    transform: translateY(-2px);
+}

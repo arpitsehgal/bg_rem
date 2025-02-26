@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Removal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Remove Background</h1>
+        
+            <div id="preview-container">
+                <canvas id="image-preview" width="500" height="500"></canvas>
+                <div id="processing-circle" class="processing-circle"></div>
+                <div id="star-container"></div>
+            </div>
+            <div class="zoom-controls">
+                
+                <input type="range" id="scale-slider" min="-2" max="2" step="0.01" value="0">
+            
+            </div>
+            
+            <input type="hidden" id="preview-image-data" name="preview_image">
+            <form id="upload-form" action="/" method="post" enctype="multipart/form-data">
+                <div class="upload-button-container">
+                    <button type="button" id="upload-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        Upload Image
+                    </button>
+                    <input type="file" id="image-input" name="image" required hidden>
+                    <button type="submit">Remove Background</button>
+                </div>
+            
+        </form>
+        <button id="download-button">Download Processed Image</button>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
